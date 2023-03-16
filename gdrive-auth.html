@@ -70,11 +70,43 @@
   <link rel="stylesheet" href="/assets/index.a11a366e.css">
 </head>
 
-<body>
-  <div id="app"></div>
-  <div class="circle1"></div>
-  <div class="circle2"></div>
-  
-</body>
+ <body> 
+  <div id="app" data-v-app="">
+   <div class="component">
+    <div class="el-card is-never-shadow box-card radius" data-v-56435898="" style="border-radius: var(--el-border-radius-round);">
+     <div class="el-card__header">
+      <div class="card-header" data-v-56435898="">
+       <h3 data-v-56435898="">Authorization code</h3>
+      </div>
+     </div>
+     <div class="el-card__body" style="">
+      <div class="content" data-v-56435898="">
+       <p data-v-56435898="">Please copy this code, switch to your bot and paste it there.</p>
+       <div class="textdiv" data-v-56435898="">
+        <textarea class="copy-textarea" data-v-56435898="" id="myCode"></textarea>
+        <br data-v-56435898="">
+        <button class="el-button el-button--success el-button--default is-round copy-btn" type="button" data-v-56435898="" style="--el-button-bg-color:#67c23a; --el-button-border-color:#67c23a; --el-button-hover-bg-color:rgb(133, 206, 97); --el-button-hover-border-color:rgb(133, 206, 97); --el-button-active-bg-color:rgb(93, 175, 52); --el-button-active-border-color:rgb(93, 175, 52);">
+         <!--v-if--><span class="">Copy to clipboard</span></button>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> 
+  <div class="circle1"></div> 
+  <div class="circle2"></div> 
+
+  <script>
+    var url = window.location.href;
+    var code = url.split("?code=")[1].split("&")[0];
+    document.getElementById("myCode").textContent = code;
+    var copyBtn = document.querySelector('.copy-btn');
+    var copyTextarea = document.querySelector('.copy-textarea');
+    copyBtn.addEventListener('click', function(event) {
+      copyTextarea.select();
+      document.execCommand('copy');
+    });
+  </script>
+ </body>
 
 </html>
