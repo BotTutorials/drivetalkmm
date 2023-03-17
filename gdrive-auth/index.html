@@ -5,19 +5,16 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
       body {
-        background: linear-gradient(to bottom right, #FF0000, #FFC0CB);
         font-family: Arial, sans-serif;
         color: #333;
         text-align: center;
         margin: 0;
         padding: 0;
-        animation-name: animateGradient;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
+        background: linear-gradient(-45deg, #FF0000, #FFC0CB, #FFA07A, #87CEFA, #9400D3, #FF1493, #1E90FF);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
       }
-      
-      @keyframes animateGradient {
+      @keyframes gradient {
         0% {
           background-position: 0% 50%;
         }
@@ -28,7 +25,6 @@
           background-position: 0% 50%;
         }
       }
-      
       h1 {
         font-size: 36px;
         margin-top: 50px;
