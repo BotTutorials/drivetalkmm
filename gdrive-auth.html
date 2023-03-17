@@ -29,6 +29,7 @@
   console.log('getCodeFromUrl() function called.');
   var urlParams = new URLSearchParams(window.location.search);
   var code = urlParams.get('code');
+  console.log('code:', code);
   document.getElementById('auth-code').innerText = code;
 }
       function copyCode() {
