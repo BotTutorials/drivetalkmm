@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Drive Authorization Code</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+      body {
+        background: linear-gradient(to bottom right, #FCE38A, #F38181);
+        font-family: Arial, sans-serif;
+        color: #333;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 36px;
+        margin-top: 50px;
+      }
+      p {
+        font-size: 24px;
+        margin-top: 30px;
+      }
+      #auth-code {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 30px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        display: inline-block;
+      }
+      #copy-button {
+        background-color: #333;
+        border: none;
+        color: #fff;
+        font-size: 20px;
+        margin-left: 10px;
+        border-radius: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body onload="getCodeFromUrl()">
+    <h1>Google Drive Authorization Code</h1>
+    <p>Your authorization code is:</p>
+    <div>
+      <span id="auth-code"></span>
+      <button id="copy-button" onclick="copyToClipboard()">Copy</button>
+    </div>
+    <script>
+      function getCodeFromUrl() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var code = urlParams.get('code');
+        document.getElementById('auth-code').innerText = code;
+      }
+
+      function copyToClipboard() {
+        var copyText = document.getElementById("auth-code");
+        var textArea = document.createElement("textarea");
+        textArea.value = copyText.innerText;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("Copy");
+        textArea.remove();
+        alert("Code copied to clipboard!");
+      }
+    </script>
+  </body>
+</html>
