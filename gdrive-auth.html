@@ -2,17 +2,48 @@
 <html>
   <head>
     <title>Google Drive Authorization Code</title>
+    <style>
+      body {
+        background: linear-gradient(to bottom, #0d47a1, #1e88e5);
+        color: #fff;
+        font-family: sans-serif;
+      }
+      .code-wrapper {
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        font-family: monospace;
+        white-space: nowrap;
+        overflow: auto;
+      }
+      .copy-button {
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 10px;
+      }
+    </style>
     <script>
       function getCodeFromUrl() {
         var urlParams = new URLSearchParams(window.location.search);
         var code = urlParams.get('code');
         document.getElementById('auth-code').innerText = code;
       }
+      function copyCode() {
+        var codeBox = document.getElementById('auth-code');
+        var codeText = codeBox.innerText;
+        navigator.clipboard.writeText(codeText);
+        alert('Code copied to clipboard!');
+      }
     </script>
   </head>
   <body onload="getCodeFromUrl()">
     <h1>Google Drive Authorization Code</h1>
     <p>Your authorization code is:</p>
-    <p id="auth-code"></p>
+    <div class="code-wrapper">
+      <span id="auth-code"></span>
+    </div>
+    <button class="copy-button" onclick="copyCode()">Copy Code</button>
   </body>
 </html>
