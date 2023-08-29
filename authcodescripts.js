@@ -5,14 +5,17 @@ function onload() {
     const AUTH_CODE = PARAMS.code;
     const SCOPE = PARAMS.scope;
 
-    if (!AUTH_CODE || SCOPE !== "https://www.googleapis.com/auth/drive") {
-        // Either "code" is missing or "scope" is incorrect, display an error message.
-        document.querySelector('.auth-code').textContent = "Authorization failed";
-
-        // Hide the copy button by setting its style to "display: none;"
+    if (!AUTH_CODE) {
+        document.querySelector('.auth-code').textContent = "Authorization failed because authorization code is missing";
         const copyButton = document.querySelector('.copy');
         copyButton.style.display = "none";
+        return;
+    }
 
+    if (SCOPE !== "https://www.googleapis.com/auth/drive") {
+        document.querySelector('.auth-code').textContent = "Authorization failed due to wrong Google Drive API scope";
+        const copyButton = document.querySelector('.copy');
+        copyButton.style.display = "none";
         return;
     }
 
