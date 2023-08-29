@@ -3,6 +3,17 @@ function onload() {
         get: (searchParams, prop) => searchParams.get(prop),
     });
     const AUTH_CODE = PARAMS.code;
+    const SCOPE = PARAMS.scope;
+
+    if (!AUTH_CODE) {
+        document.querySelector('.auth-code').textContent = "Authorization failed because authorization code is missing";
+        return;
+    }
+
+    if (SCOPE !== "https://www.googleapis.com/auth/drive") {
+        document.querySelector('.auth-code').textContent = "Authorization failed due to wrong Google Drive API scope";
+        return;
+    }
 
     document.querySelector('.auth-code').textContent = AUTH_CODE;
 
