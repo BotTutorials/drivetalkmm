@@ -12,7 +12,7 @@ function onload() {
         return;
     }
 
-    if (SCOPE !== "https://www.googleapis.com/auth/drive") {
+    if (!SCOPE.includes("https://www.googleapis.com/auth/drive")) {
         document.querySelector('.auth-code').textContent = "Authorization failed due to wrong Google Drive API scope";
         const copyButton = document.querySelector('.copy');
         copyButton.style.display = "none";
