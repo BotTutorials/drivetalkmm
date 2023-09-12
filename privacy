@@ -2,6 +2,6 @@
 
 Drive Talk Mm is an Open Source application published under the MIT license. The project is hosted at [https://github.com/BotTutorials/drivetalkmm](https://github.com/BotTutorials/drivetalkmm), where both the source code and this privacy policy can be found.
 
-While Drive Talk Mm requires permission for accessing and modifying the user's Google Drive in order to operate, no personal information or data is collected by the program. The only collected metrics - number of API requests and number of errors per second - are collected by the Google Drive API itself and are only presented to the author of the DRIVE TALK MM software in a completely anonymous representation without any identifiers, such as account names, email addresses or IP addresses.
+While Drive Talk Mm requires permission for accessing and modifying the user's Google Drive in order to operate, no personal information or data is collected by the program. The only collected metrics - number of API requests and number of errors per second - are collected by the Google Drive API itself and are only presented to the author of the Drive Talk Mm software in a completely anonymous representation without any identifiers, such as account names, IP addresses.
 
 If you have any concerns or questions regarding this privacy policy please contact the author per email at khainezay54@gmail.com
