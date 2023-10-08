@@ -5,5 +5,5 @@ function Group() {
   window.location.href = 'https://t.me/drivetalk';
 }
 function Privacy() {
-  alert('Privacy button clicked');
+  window.location.href = '/privacy';
 }
