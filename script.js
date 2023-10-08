@@ -1,11 +1,9 @@
-function openChannel() {
+function Channel() {
   window.location.href = 'https://t.me/drivetalkchannel';
 }
-function openGroup() {
+function Group() {
   window.location.href = 'https://t.me/drivetalk';
 }
-
-// Function for the "Privacy" button
-function openPrivacy() {
+function Privacy() {
   alert('Privacy button clicked');
 }
