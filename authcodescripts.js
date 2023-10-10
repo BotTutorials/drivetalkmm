@@ -1,7 +1,5 @@
 function onload() {
-    const PARAMS = new Proxy(new URLSearchParams(window.location.search), {
-        get: (searchParams, prop) => searchParams.get(prop),
-    });
+    const PARAMS = new URLSearchParams(window.location.search);
     const AUTH_CODE = PARAMS.code;
     const SCOPE = PARAMS.scope;
 
