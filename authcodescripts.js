@@ -4,8 +4,6 @@ function onload() {
     });
     const AUTH_CODE = PARAMS.code;
     const SCOPE = PARAMS.scope;
-    const LOGIN_URL = PARAMS.login_url
-
     if (!AUTH_CODE) {
         document.querySelector('.auth-code').textContent = "Authorization failed because authorization code is missing";
         const copyButton = document.querySelector('.copy');
@@ -21,7 +19,6 @@ function onload() {
     }
 
     document.querySelector('.auth-code').textContent = AUTH_CODE;
-    document.querySelector('.login_url').textContent = LOGIN_URL;
     setupCopyButton(document.querySelector('.copy'), AUTH_CODE);
 }
 
