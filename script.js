@@ -12,5 +12,9 @@ function Login() {
         get: (searchParams, prop) => searchParams.get(prop),
     });
   const LOGIN_URL = atob(PARAMS.login_url);
+  if (!LOGIN_URL) {
+    login.style.display = "none";
+    return;
+  }
   window.location.href = LOGIN_URL;
 }
