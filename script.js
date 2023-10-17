@@ -14,7 +14,7 @@ function Login() {
   const LOGIN_URL = atob(PARAMS.login_url);
   if (!PARAMS.login_url) {
     const loginlink = document.querySelector('.login');
-    const loginphoto = document.querySelector('.loginphoto');
+    const loginphoto = document.getElementById('.loginphoto');
     loginlink.style.display = "none";
     loginphoto.opacity = 0.5;
     loginphoto.style.display = "none";
