@@ -12,9 +12,12 @@ function Login() {
         get: (searchParams, prop) => searchParams.get(prop),
     });
   const LOGIN_URL = atob(PARAMS.login_url);
-  if (!LOGIN_URL) {
-    const loginLink = document.querySelector('.login');
-    loginLink.style.display = 'none';
+  if (LOGIN_URL) {
+    window.location.href = LOGIN_URL;
+  } else {
+    const loginElement = document.getElementById('login');
+    if (loginElement) {
+      loginElement.style.display = 'none';
+    }
   }
-  window.location.href = LOGIN_URL;
 }
