@@ -16,6 +16,7 @@ function Login() {
     const loginlink = document.querySelector('.login');
     const loginphoto = document.querySelector('.loginphoto');
     loginlink.style.display = "none";
+    loginphoto.opacity = 0.5;
     loginphoto.style.display = "none";
     return;
   }
