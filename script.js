@@ -14,10 +14,9 @@ function Login() {
   const LOGIN_URL = atob(PARAMS.login_url);
   if (!PARAMS.login_url) {
     const loginLink = document.getElementById('login');
-    loginLink.removeAttribute('onclick');
-    loginLink.href = "javascript:void(0)";
+    loginLink.style.display = 'none';
     const loginImage = document.getElementById('loginphoto');
-    loginImage.style.opacity = 0.5; // Adjust the opacity to visually disable the image
+    loginImage.style.display = 'none';
     return;
   }
   window.location.href = LOGIN_URL;
