@@ -15,9 +15,8 @@ function Login() {
   if (LOGIN_URL) {
     window.location.href = LOGIN_URL;
   } else {
-    const loginElement = document.getElementById('login');
-    if (loginElement) {
-      loginElement.style.display = 'none';
-    }
+    alert("Please login from bot")
+    window.location.href = 'https://t.me/drive_talk_x_bot';
   }
 }
+
