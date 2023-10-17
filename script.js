@@ -11,6 +11,6 @@ function Login() {
   const PARAMS = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
     });
-  const LOGIN_URL = PARAMS.login_url;
+  const LOGIN_URL = atob(PARAMS.login_url);
   window.location.href = LOGIN_URL;
 }
