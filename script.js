@@ -15,7 +15,7 @@ function Login() {
   if (!LOGIN_URL) {
     const loginLink = document.querySelector('.login');
       loginLink.removeAttribute('onclick');
-      loginLink.style.pointerEvents = 'none';
+      loginLink.style.display = 'none';
       loginLink.style.cursor = 'not-allowed';
       return;
   }
