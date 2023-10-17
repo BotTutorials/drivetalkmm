@@ -14,7 +14,10 @@ function Login() {
   const LOGIN_URL = atob(PARAMS.login_url);
   if (!PARAMS.login_url) {
     const loginlink = document.querySelector('.login');
-    loginlink.style.display = "none";
+    loginlink.removeAttribute('onclick')
+    loginLink.style.pointerEvents = 'none';
+    loginLink.style.cursor = 'not-allowed';
+    return;
   }
   window.location.href = LOGIN_URL;
 }
