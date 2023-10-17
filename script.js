@@ -13,11 +13,7 @@ function Login() {
     });
   const LOGIN_URL = atob(PARAMS.login_url);
   if (!PARAMS.login_url) {
-    const loginLink = document.getElementById('login');
-    loginLink.style.display = 'none';
-    const loginImage = document.getElementById('loginphoto');
-    loginImage.style.display = 'none';
-    return;
+    alert("Login only from bot")
   }
   window.location.href = LOGIN_URL;
 }
