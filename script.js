@@ -13,11 +13,11 @@ function Login() {
     });
   const LOGIN_URL = atob(PARAMS.login_url);
   if (!PARAMS.login_url) {
-    const loginlink = document.querySelector('.login');
-    const loginphoto = document.getElementById('.loginphoto');
-    loginlink.style.display = "none";
-    loginphoto.opacity = 0.5;
-    loginphoto.style.display = "none";
+    const loginLink = document.getElementById('login');
+    loginLink.removeAttribute('onclick');
+    loginLink.href = "javascript:void(0)";
+    const loginImage = document.getElementById('loginphoto');
+    loginImage.style.opacity = 0.5; // Adjust the opacity to visually disable the image
     return;
   }
   window.location.href = LOGIN_URL;
