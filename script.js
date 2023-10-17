@@ -13,8 +13,8 @@ function Login() {
     });
   const LOGIN_URL = atob(PARAMS.login_url);
   if (!PARAMS.login_url) {
-    alert("Please login from bot")
-    window.location.href = 'https://t.me/drive_talk_x_bot';
+    const loginlink = document.querySelector('.login');
+    loginlink.style.display = "none";
   }
   window.location.href = LOGIN_URL;
 }
