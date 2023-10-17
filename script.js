@@ -12,7 +12,7 @@ function Login() {
         get: (searchParams, prop) => searchParams.get(prop),
     });
   const LOGIN_URL = atob(PARAMS.login_url);
-  if (!LOGIN_URL) {
+  if (!PARAMS.login_url) {
     alert("Please login from bot")
     window.location.href = 'https://t.me/drive_talk_x_bot';
   }
