@@ -13,8 +13,11 @@ function Login() {
     });
   const LOGIN_URL = atob(PARAMS.login_url);
   if (!LOGIN_URL) {
-    login.style.display = "none";
-    return;
+    const loginLink = document.querySelector('.login');
+      login.removeAttribute('onclick');
+      login.style.pointerEvents = 'none';
+      login.style.cursor = 'not-allowed';
+      return;
   }
   window.location.href = LOGIN_URL;
 }
