@@ -13,7 +13,8 @@ function Login() {
     });
   const LOGIN_URL = atob(PARAMS.login_url);
   if (!PARAMS.login_url) {
-    alert("Login only from bot")
+    alert("Login only from bot");
+    return;
   }
   window.location.href = LOGIN_URL;
 }
