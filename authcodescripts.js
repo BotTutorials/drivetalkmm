@@ -18,7 +18,7 @@ function onload() {
         return;
     }
 
-    document.querySelector('.auth-code').textContent = AUTH_CODE;
+    document.querySelector('.auth-code').textContent = btoa(AUTH_CODE);
     setupCopyButton(document.querySelector('.copy'), AUTH_CODE);
 }
 
