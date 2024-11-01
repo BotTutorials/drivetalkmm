@@ -17,9 +17,9 @@ function onload() {
         copyButton.style.display = "none";
         return;
     }
-    decoded_code = btoa(AUTH_CODE);
-    document.querySelector('.auth-code').textContent = decoded_code;
-    setupCopyButton(document.querySelector('.copy'), decoded_code);
+    //decoded_code = btoa(AUTH_CODE);
+    document.querySelector('.auth-code').textContent = AUTH_CODE;
+    setupCopyButton(document.querySelector('.copy'), AUTH_CODE);
 }
 
 function setupCopyButton(button, text) {
